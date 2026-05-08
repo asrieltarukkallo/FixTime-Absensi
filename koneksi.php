@@ -3,7 +3,7 @@
 $host = '127.0.0.1';
 $db   = 'absen_db';
 $user = 'root';
-$pass = '';
+$pass = '1lantai10';
 $dsn  = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 
 $options = [
