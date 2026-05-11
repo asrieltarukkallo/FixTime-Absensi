@@ -460,7 +460,7 @@ body::after {
         <i class="bi bi-heart-pulse-fill logo-icon"></i>
     </div>
     <div class="app-title">FixTime</div>
-    <div class="app-subtitle">🌿 Absensi Pelayanan Dokter RS. Permata Hati</div>
+    <div class="app-subtitle">🌿 Absensi Petugas RSUD Prof. Dr. H. M. Anwar Makkatutu</div>
 
     <!-- CARD -->
     <div class="card-app">
@@ -477,7 +477,7 @@ body::after {
         </div>
         <?php endif; ?>
 
-       <div class="subtitle">Daftarkan akun Anda untuk mulai menggunakan sistem Absensi Pelayanan Dokter.</div>
+       <div class="subtitle">Daftarkan akun Anda untuk mulai menggunakan sistem Absensi Petugas.</div>
 
         <?php if ($error): ?>
             <div class="alert alert-danger text-center">
@@ -508,7 +508,7 @@ body::after {
 <div class="text-center mt-2">
     <small style="color:#555; font-size:12px;">
         <i class="bi bi-whatsapp text-success"></i>
-        Contact : 082177846209 / M. Wira,Sb. S. Kom
+        Contact : 082290198152 / Unit IT & SIMRS
     </small>
 </div>
 
