@@ -79,7 +79,7 @@ $riwayat = $stmt_riwayat->fetchAll();
         <div class="header-content">
             <div class="header-greeting">👋 Selamat Datang, Assalamualaikum Wr, Wb</div>
             <div class="header-name"><?= htmlspecialchars($_SESSION['nama']) ?></div>
-            <div class="header-subtitle">🌿 FixTime • Absensi Pelayanan Medis</div>
+            <div class="header-subtitle">🌿 FixTime • Absensi RSUD Prof. Dr. H. M. Anwar Makkatutu</div>
             <a href="logout.php" class="btn-logout">
                 <i class="bi bi-box-arrow-right me-1"></i>Logout
             </a>
@@ -115,7 +115,28 @@ $riwayat = $stmt_riwayat->fetchAll();
 
     <!-- MENU GRID -->
     <div class="menu-grid">
-        <a href="absen_poli.php" class="menu-item">
+        <a href="absen_masuk.php" class="menu-item">
+            <div class="menu-icon-box">
+                <i class="bi bi-box-arrow-right"></i>
+            </div>
+            <div class="menu-label">Absen Masuk</div>
+        </a>
+
+        <a href="absen_pulang.php" class="menu-item">
+            <div class="menu-icon-box">
+                <i class="bi bi-box-arrow-left"></i>
+            </div>
+            <div class="menu-label">Absen Pulang</div>
+        </a>
+
+        <a href="absen_dinas.php" class="menu-item">
+            <div class="menu-icon-box">
+                <i class="bi bi-laptop-fill"></i>
+            </div>
+            <div class="menu-label">Jam Dinas Luar</div>
+        </a>
+
+        <!-- <a href="absen_poli.php" class="menu-item">
             <div class="menu-icon-box">
                 <i class="bi bi-hospital-fill"></i>
             </div>
@@ -129,19 +150,12 @@ $riwayat = $stmt_riwayat->fetchAll();
             <div class="menu-label">Visite</div>
         </a>
 
-        <a href="absen_dinas.php" class="menu-item">
-            <div class="menu-icon-box">
-                <i class="bi bi-building-fill"></i>
-            </div>
-            <div class="menu-label">Jam Dinas</div>
-        </a>
-
         <a href="absen_operasi.php" class="menu-item">
             <div class="menu-icon-box">
                 <i class="bi bi-heart-pulse-fill"></i>
             </div>
             <div class="menu-label">Operasi</div>
-        </a>
+        </a> -->
 
         <a href="riwayat.php" class="menu-item">
             <div class="menu-icon-box">

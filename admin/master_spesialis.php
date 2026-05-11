@@ -516,7 +516,7 @@ body {
         <li class="menu-item">
             <a href="master_spesialis.php" class="menu-link">
                 <i class="bi bi-card-list"></i>
-                <span>Data Spesialis</span>
+                <span>Data Instalasi</span>
             </a>
         </li>
         <li class="menu-item">
@@ -552,8 +552,8 @@ body {
 
     <!-- HEADER -->
     <div class="page-header">
-        <div class="header-title">📋 Master Spesialis</div>
-        <div class="header-subtitle">Kelola data spesialis dokter dalam sistem</div>
+        <div class="header-title">📋 Master Instalasi</div>
+        <div class="header-subtitle">Kelola data instalasi dalam sistem</div>
     </div>
 
     <!-- SUCCESS MESSAGE -->
@@ -561,9 +561,9 @@ body {
         <div class="alert-custom alert-success">
             <i class="bi bi-check-circle-fill"></i>
             <?php
-                if ($success === 'add') echo 'Data spesialis berhasil ditambahkan!';
-                elseif ($success === 'edit') echo 'Data spesialis berhasil diupdate!';
-                elseif ($success === 'delete') echo 'Data spesialis berhasil dihapus!';
+                if ($success === 'add') echo 'Data instalasi berhasil ditambahkan!';
+                elseif ($success === 'edit') echo 'Data instalasi berhasil diupdate!';
+                elseif ($success === 'delete') echo 'Data instalasi berhasil dihapus!';
             ?>
         </div>
     <?php endif; ?>
@@ -583,7 +583,7 @@ body {
         <div class="form-card">
             <div class="card-title">
                 <i class="bi bi-plus-circle-fill"></i>
-                <?= $editData ? 'Edit' : 'Tambah' ?> Spesialis
+                <?= $editData ? 'Edit' : 'Tambah' ?> Instalasi
             </div>
 
             <form method="POST">
@@ -594,13 +594,13 @@ body {
                 <div class="form-group">
                     <label class="form-label">
                         <i class="bi bi-card-text me-1"></i>
-                        Nama Spesialis
+                        Nama Instalasi
                     </label>
                     <input 
                         type="text" 
                         name="nama_spesialis" 
                         class="form-control-custom" 
-                        placeholder="Contoh: Spesialis Jantung" 
+                        placeholder="Contoh: Unit IT & SIMRS" 
                         value="<?= $editData ? htmlspecialchars($editData['nama_spesialis']) : '' ?>"
                         required
                         autofocus
@@ -625,7 +625,7 @@ body {
             <div class="card-header-custom">
                 <div class="card-title">
                     <i class="bi bi-table"></i>
-                    Daftar Spesialis
+                    Daftar Instalasi
                 </div>
                 <span class="badge-count">
                     Total: <?= $totalSpesialis ?>
@@ -637,7 +637,7 @@ body {
                 <thead>
                     <tr>
                         <th style="width: 60px;">No</th>
-                        <th>Nama Spesialis</th>
+                        <th>Nama Instalasi</th>
                         <th style="width: 180px;">Tanggal Dibuat</th>
                         <th style="width: 120px;">Aksi</th>
                     </tr>

@@ -34,7 +34,7 @@ if (empty($jenis_absen) || empty($foto_data)) {
 }
 
 // Validasi jenis absen
-if (!in_array($jenis_absen, ['Operasi','Poliklinik', 'Visite', 'Jam Dinas'])) {
+if (!in_array($jenis_absen, ['Masuk','Pulang','Jam Dinas','Visite','Poliklinik','Operasi'])) {
     echo json_encode(['success' => false, 'message' => 'Jenis absensi tidak valid']);
     exit;
 }

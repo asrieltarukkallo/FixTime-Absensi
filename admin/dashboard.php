@@ -540,7 +540,7 @@ body {
         <li class="menu-item">
             <a href="master_spesialis.php" class="menu-link">
                 <i class="bi bi-card-list"></i>
-                <span>Data Spesialis</span>
+                <span>Data Instalasi</span>
             </a>
         </li>
         <li class="menu-item">
@@ -628,7 +628,7 @@ body {
             <div class="stat-icon-box purple">
                 <i class="bi bi-card-list"></i>
             </div>
-            <div class="stat-label">Total Spesialis</div>
+            <div class="stat-label">Total Instalasi</div>
             <div class="stat-value"><?= $totSpesialis ?></div>
             <div class="stat-change"><i class="bi bi-arrow-right"></i> Lihat Detail</div>
         </div>
@@ -637,7 +637,7 @@ body {
             <div class="stat-icon-box red">
                 <i class="bi bi-clock-fill"></i>
             </div>
-            <div class="stat-label">Jam Dinas</div>
+            <div class="stat-label">Jam Dinas Luar</div>
             <div class="stat-value"><?= $statJenis['total_dinas'] ?></div>
             <div class="stat-change">Hari Ini</div>
         </div>

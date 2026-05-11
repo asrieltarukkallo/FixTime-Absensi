@@ -489,7 +489,7 @@ body {
         <li class="menu-item">
             <a href="master_spesialis.php" class="menu-link">
                 <i class="bi bi-card-list"></i>
-                <span>Data Spesialis</span>
+                <span>Data Instalasi</span>
             </a>
         </li>
         <li class="menu-item">
@@ -557,7 +557,7 @@ body {
                 <i class="bi bi-person-badge-fill"></i>
             </div>
             <div class="mini-stat-content">
-                <div class="label">User / Dokter</div>
+                <div class="label">User / Petugas</div>
                 <div class="value"><?= $userCount ?></div>
             </div>
         </div>

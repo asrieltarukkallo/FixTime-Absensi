@@ -459,6 +459,16 @@ body {
     white-space: nowrap;
 }
 
+.badge-jenis.masuk {
+    background: #d1fae5;
+    color: #059669;
+}
+
+.badge-jenis.pulang {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
 .badge-jenis.poli {
     background: #dbeafe;
     color: #1e40af;
@@ -597,7 +607,7 @@ body {
         <li class="menu-item">
             <a href="master_spesialis.php" class="menu-link">
                 <i class="bi bi-card-list"></i>
-                <span>Data Spesialis</span>
+                <span>Data Instalasi</span>
             </a>
         </li>
         <li class="menu-item">
@@ -641,7 +651,7 @@ body {
                     $dokter_selected = array_filter($list_dokter, fn($d) => $d['id'] == $filter_dokter);
                     $dokter_selected = reset($dokter_selected);
                 ?>
-                • Dokter: <strong><?= $dokter_selected['nama'] ?? '' ?></strong>
+                • Petugas: <strong><?= $dokter_selected['nama'] ?? '' ?></strong>
             <?php endif; ?>
         </div>
     </div>
@@ -667,9 +677,9 @@ body {
                 </div>
                 
                 <div>
-                    <label style="font-size: 12px; color: #6b7280; margin-bottom: 6px; display: block;">Dokter</label>
+                    <label style="font-size: 12px; color: #6b7280; margin-bottom: 6px; display: block;">Petugas</label>
                     <select name="dokter" class="form-select-custom" style="width: 100%;">
-                        <option value="all">Semua Dokter</option>
+                        <option value="all">Semua Petugas</option>
                         <?php foreach ($list_dokter as $dok): ?>
                             <option value="<?= $dok['id'] ?>" <?= $filter_dokter == $dok['id'] ? 'selected' : '' ?>>
                                 <?= htmlspecialchars($dok['nama']) ?>
@@ -682,6 +692,8 @@ body {
                     <label style="font-size: 12px; color: #6b7280; margin-bottom: 6px; display: block;">Jenis Absensi</label>
                     <select name="jenis" class="form-select-custom" style="width: 100%;">
                         <option value="all">Semua Jenis</option>
+                        <option value="Masuk" <?= $filter_jenis == 'Masuk' ? 'selected' : '' ?>>Masuk</option>
+                        <option value="Pulang" <?= $filter_jenis == 'Pulang' ? 'selected' : '' ?>>Pulang</option>
                         <option value="Poliklinik" <?= $filter_jenis == 'Poliklinik' ? 'selected' : '' ?>>Poliklinik</option>
                         <option value="Visite" <?= $filter_jenis == 'Visite' ? 'selected' : '' ?>>Visite</option>
                         <option value="Jam Dinas" <?= $filter_jenis == 'Jam Dinas' ? 'selected' : '' ?>>Jam Dinas</option>
@@ -714,7 +726,7 @@ body {
                 <i class="bi bi-people-fill"></i>
             </div>
             <div class="stat-value"><?= $stats['total_dokter'] ?? 0 ?></div>
-            <div class="stat-label">Dokter Aktif</div>
+            <div class="stat-label">Petugas Aktif</div>
         </div>
         
         <div class="stat-card">
@@ -830,6 +842,8 @@ body {
                         elseif ($abs['jenis_absen'] == 'Visite') $badge_class = 'visite';
                         elseif ($abs['jenis_absen'] == 'Jam Dinas') $badge_class = 'dinas';
                         elseif ($abs['jenis_absen'] == 'Operasi') $badge_class = 'operasi';
+                        elseif ($abs['jenis_absen'] == 'Masuk') $badge_class = 'masuk';
+                        elseif ($abs['jenis_absen'] == 'Pulang') $badge_class = 'pulang';
                     ?>
                     <tr>
                         <td><?= $no++ ?></td>

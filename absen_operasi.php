@@ -584,10 +584,23 @@ function checkLocation() {
     );
 }
 
+function getUserMediaCompat(constraints) {
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        return navigator.mediaDevices.getUserMedia(constraints);
+    }
+    const getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+    if (getUserMedia) {
+        return new Promise((resolve, reject) => {
+            getUserMedia.call(navigator, constraints, resolve, reject);
+        });
+    }
+    return Promise.reject(new Error('Browser tidak mendukung akses kamera. Gunakan browser terbaru dan pastikan halaman dibuka melalui HTTPS.'));
+}
+
 // Start Camera
 async function startCamera() {
     try {
-        stream = await navigator.mediaDevices.getUserMedia({ 
+        stream = await getUserMediaCompat({ 
             video: { 
                 facingMode: 'user',
                 width: { ideal: 1280 },
@@ -596,7 +609,7 @@ async function startCamera() {
         });
         video.srcObject = stream;
     } catch (error) {
-        alert('Gagal mengakses kamera: ' + error.message);
+        alert('Gagal mengakses kamera: ' + error.message + '\nPastikan Anda menggunakan browser terbaru, mengizinkan akses kamera, dan membuka halaman melalui HTTPS.');
     }
 }
 

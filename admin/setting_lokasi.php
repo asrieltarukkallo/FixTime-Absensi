@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $check = $pdo->query("SELECT id FROM setting_lokasi LIMIT 1");
     
     if ($check->rowCount() > 0) {
+        $currentId = $check->fetchColumn();
         // Update existing
         $stmt = $pdo->prepare("UPDATE setting_lokasi SET 
             nama_lokasi = ?, 
@@ -36,9 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             alamat = ?, 
             keterangan = ?,
             updated_at = NOW()
-            WHERE id = (SELECT id FROM setting_lokasi LIMIT 1)
+            WHERE id = ?
         ");
-        $stmt->execute([$nama_lokasi, $latitude, $longitude, $radius, $alamat, $keterangan]);
+        $stmt->execute([$nama_lokasi, $latitude, $longitude, $radius, $alamat, $keterangan, $currentId]);
         $success = 'update';
     } else {
         // Insert new
@@ -456,7 +457,7 @@ body {
         <li class="menu-item">
             <a href="master_spesialis.php" class="menu-link">
                 <i class="bi bi-card-list"></i>
-                <span>Data Spesialis</span>
+                <span>Data Instalasi</span>
             </a>
         </li>
         <li class="menu-item">
