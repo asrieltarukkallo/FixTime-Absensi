@@ -3,7 +3,7 @@ session_start();
 require 'koneksi.php';
 
 // Set timezone ke WIB (Indonesia Barat)
-date_default_timezone_set('Asia/Jakarta');
+date_default_timezone_set('Asia/Makassar');
 
 header('Content-Type: application/json');
 

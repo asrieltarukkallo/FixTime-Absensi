@@ -351,11 +351,11 @@ body::after {
         <i class="bi bi-heart-pulse-fill logo-icon"></i>
     </div>
     <div class="app-title">FixTime</div>
-    <div class="app-subtitle">🌿 Absensi Pelayanan Dokter</div>
+    <div class="app-subtitle">🌿 Absensi Pelayanan Petugas</div>
 
     <!-- CARD -->
     <div class="card-app">
-        <div class="subtitle">Daftarkan akun Anda untuk mulai menggunakan sistem Absensi Pelayanan Dokter.</div>
+        <div class="subtitle">Daftarkan akun Anda untuk mulai menggunakan sistem Absensi Pelayanan Petugas.</div>
 
         <?php if(!empty($error)): ?>
             <div class="alert alert-danger text-center">
@@ -386,7 +386,7 @@ body::after {
 
             <div class="input-group-custom">
                 <select name="spesialis" class="form-select" required>
-                    <option value="">-- Pilih Spesialis --</option>
+                    <option value="">-- Pilih Instalasi --</option>
                     <?php foreach($spesialisList as $s): ?>
                         <option value="<?= htmlspecialchars($s['id']) ?>"><?= htmlspecialchars($s['nama_spesialis']) ?></option>
                     <?php endforeach; ?>

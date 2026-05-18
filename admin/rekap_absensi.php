@@ -783,7 +783,7 @@ body {
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama Dokter</th>
+                        <th>Nama Petugas</th>
                         <th>Email</th>
                         <th>Total</th>
                         <th>Poli</th>
@@ -825,7 +825,7 @@ body {
                     <tr>
                         <th>No</th>
                         <th>Tanggal</th>
-                        <th>Nama Dokter</th>
+                        <th>Nama Petugas</th>
                         <th>Jenis</th>
                         <th>Waktu</th>
                         <th>Foto</th>

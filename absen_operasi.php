@@ -13,7 +13,7 @@
 session_start();
 require 'koneksi.php';
 
-date_default_timezone_set('Asia/Jakarta');
+date_default_timezone_set('Asia/Makassar');
 
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
