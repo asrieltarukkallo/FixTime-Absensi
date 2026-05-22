@@ -393,7 +393,7 @@ body {
             <i class="bi bi-check-circle-fill"></i>
             <div>
                 <strong>Anda sudah absen hari ini!</strong><br>
-                Waktu: <?= $existing['waktu_absen'] ?> WIB
+                Waktu: <?= $existing['waktu_absen'] ?> WITA
             </div>
         </div>
 

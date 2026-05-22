@@ -2,7 +2,7 @@
 session_start();
 require 'koneksi.php';
 
-// Set timezone ke WIB
+// Set timezone ke WITA
 date_default_timezone_set('Asia/Makassar');
 
 if (!isset($_SESSION['user_id'])) {
@@ -60,7 +60,7 @@ $existing = $stmt->fetch();
             <i class="bi bi-check-circle-fill"></i>
             <div>
                 <strong>Anda sudah absen hari ini!</strong><br>
-                Waktu: <?= $existing['waktu_absen'] ?> WIB
+                Waktu: <?= $existing['waktu_absen'] ?> WITA
             </div>
         </div>
 

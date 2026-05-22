@@ -76,7 +76,7 @@ if (!$user) {
                     <div class="col-8"><?= htmlspecialchars($user['email']) ?></div>
                 </div>
                 <div class="row mb-2">
-                    <div class="col-4 fw-bold">Spesialis</div>
+                    <div class="col-4 fw-bold">Instalasi</div>
                     <div class="col-8"><?= htmlspecialchars($user['nama_spesialis'] ?? '-') ?></div>
                 </div>
                 <div class="row mb-2">

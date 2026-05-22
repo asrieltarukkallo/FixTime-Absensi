@@ -2,7 +2,7 @@
 session_start();
 require 'koneksi.php';
 
-// Set timezone ke WIB
+// Set timezone ke WITA
 date_default_timezone_set('Asia/Makassar');
 
 if (!isset($_SESSION['user_id'])) {
@@ -360,7 +360,7 @@ body {
         </div>
         <div class="header-title">Absensi Masuk</div>
         <div class="header-subtitle">📅 <?= strftime('%A, %d %B %Y', strtotime($today)) ?></div>
-        <div class="header-subtitle">⏰ <?= date('H:i:s') ?> WIB</div>
+        <div class="header-subtitle">⏰ <?= date('H:i:s') ?> WITA</div>
     </div>
 
     <?php if ($existing): ?>
@@ -369,7 +369,7 @@ body {
             <i class="bi bi-check-circle-fill"></i>
             <div>
                 <strong>Absensi Masuk Berhasil!</strong><br>
-                <small>Anda sudah absen masuk hari ini pada <?= date('H:i', strtotime($existing['waktu_absen'])) ?> WIB</small>
+                <small>Anda sudah absen masuk hari ini pada <?= date('H:i', strtotime($existing['waktu_absen'])) ?> WITA</small>
             </div>
         </div>
 
@@ -384,7 +384,7 @@ body {
                     <i class="bi bi-check-circle-fill me-2"></i>Sudah Absen Masuk
                 </div>
                 <div style="margin-top: 20px; text-align: left; background: #f9fafb; padding: 16px; border-radius: 12px;">
-                    <p style="margin: 8px 0;"><strong>⏰ Waktu:</strong> <?= date('H:i:s', strtotime($existing['waktu_absen'])) ?> WIB</p>
+                    <p style="margin: 8px 0;"><strong>⏰ Waktu:</strong> <?= date('H:i:s', strtotime($existing['waktu_absen'])) ?> WITA</p>
                     <p style="margin: 8px 0;"><strong>📍 Lokasi:</strong> <?= $existing['latitude'] ?>, <?= $existing['longitude'] ?></p>
                     <?php if (!empty($existing['keterangan'])): ?>
                     <p style="margin: 8px 0;"><strong>📝 Keterangan:</strong> <?= htmlspecialchars($existing['keterangan']) ?></p>
